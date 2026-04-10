@@ -1,217 +1,201 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay's Repaints LLC | Professional Painting in Central Florida</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://grok.x.ai/image/Qg73U');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .paint-stroke {
+      position: relative;
+    }
+    .paint-stroke::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(to right, #3b82f6, #60a5fa);
+      transform: scaleX(0);
+      transition: transform 0.7s ease;
+    }
+    .paint-stroke:hover::after { transform: scaleX(1); }
+    .service-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 30px 60px -15px rgb(59 130 246 / 0.3);
+    }
   </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en" class="scroll-smooth"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Jay's Repaints LLC | Professional Painting in Central Florida&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://unpkg.com/aos@2.3.1/dist/aos.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: 'Inter', system-ui, sans-serif; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-bg {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://grok.x.ai/image/Qg73U');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-size: cover;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-position: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-attachment: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.paint-stroke {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.paint-stroke::after {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>content: '';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>bottom: -6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(to right, #3b82f6, #60a5fa);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scaleX(0);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.7s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.paint-stroke:hover::after { transform: scaleX(1); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.service-card:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-15px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 30px 60px -15px rgb(59 130 246 / 0.3);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="bg-zinc-950 text-white"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Navbar --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-lg z-50 border-b border-zinc-800"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center gap-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-3xl shadow-lg"&gt;🎨&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1 class="text-2xl font-bold tracking-tighter"&gt;Jay's Repaints&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-[10px] text-blue-400 -mt-1"&gt;LLC&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hidden md:flex gap-8 text-sm font-medium"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#services" class="hover:text-blue-400 transition-colors"&gt;Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#projects" class="hover:text-blue-400 transition-colors"&gt;Projects&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#about" class="hover:text-blue-400 transition-colors"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact" class="hover:text-blue-400 transition-colors"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-7 py-3.5 rounded-2xl font-semibold transition-all active:scale-95"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Free Quote</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Hero --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="hero-bg min-h-screen flex items-center pt-20"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-6xl mx-auto px-6 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div data-aos="fade-down" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-8 py-3 rounded-full mb-8 border border-white/20"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="text-emerald-400 text-xl"&gt;●&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="font-medium tracking-wide"&gt;Serving Central Florida • Licensed &amp; Insured&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 data-aos="fade-up" class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Expert Painting.&lt;br&gt;Flawless Results.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/h1&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p data-aos="fade-up" data-aos-delay="200" class="text-2xl text-zinc-200 max-w-2xl mx-auto mb-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Professional residential, commercial, and farm painting across Marion, Levy, Alachua &amp; surrounding counties.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row gap-5 justify-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact" class="bg-white text-zinc-950 px-10 py-5 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 hover:scale-105 transition"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;i class="fas fa-phone"&gt;&lt;/i&gt; Get Your Free Estimate</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://share.google/rpyaR7NNojo3cebYP" target="_blank"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">           </span>class="border-2 border-white/60 hover:bg-white/10 px-10 py-5 rounded-2xl font-semibold text-lg transition flex items-center justify-center gap-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>View Google Profile →</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Services --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="services" class="py-24 bg-zinc-900"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto px-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="text-center mb-16"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 data-aos="fade-up" class="text-5xl font-bold mb-4"&gt;Our Services&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p data-aos="fade-up" data-aos-delay="100" class="text-zinc-400 text-lg"&gt;Interior • Exterior • Specialty&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div data-aos="fade-up" class="service-card bg-zinc-800 p-10 rounded-3xl border border-zinc-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-6xl mb-6"&gt;🏡&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-3xl font-semibold mb-4"&gt;Interior Painting&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-zinc-400"&gt;Fresh coats, accent walls, cabinet refinishing, and clean, precise finishes.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div data-aos="fade-up" data-aos-delay="150" class="service-card bg-zinc-800 p-10 rounded-3xl border border-zinc-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-6xl mb-6"&gt;🌳&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-3xl font-semibold mb-4"&gt;Exterior Painting&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-zinc-400"&gt;Durable protection for your home, barn, or commercial building.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div data-aos="fade-up" data-aos-delay="300" class="service-card bg-zinc-800 p-10 rounded-3xl border border-zinc-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-6xl mb-6"&gt;🏠&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-3xl font-semibold mb-4"&gt;Farms &amp; Commercial&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-zinc-400"&gt;Barn painting, pressure washing, staining, and large-scale projects.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Projects --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="projects" class="py-24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto px-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 data-aos="fade-up" class="text-5xl font-bold text-center mb-4"&gt;Recent Projects&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p data-aos="fade-up" data-aos-delay="100" class="text-center text-zinc-400 mb-16"&gt;Real work. Real results.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div data-aos="zoom-in" class="rounded-3xl overflow-hidden shadow-2xl"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://grok.x.ai/image/Qg73U" alt="Blue Barn Exterior" class="w-full aspect-video object-cover hover:scale-110 transition duration-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="p-6 bg-zinc-900"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="font-medium"&gt;Beautiful Blue Barn – Exterior Repaint&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div data-aos="zoom-in" data-aos-delay="100" class="rounded-3xl overflow-hidden shadow-2xl"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://grok.x.ai/image/SNVKp" alt="Red Barn Doors" class="w-full aspect-video object-cover hover:scale-110 transition duration-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="p-6 bg-zinc-900"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="font-medium"&gt;Custom Red Barn Doors with White Trim&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div data-aos="zoom-in" data-aos-delay="200" class="rounded-3xl overflow-hidden shadow-2xl"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://grok.x.ai/image/CrVLC" alt="Interior Painting" class="w-full aspect-video object-cover hover:scale-110 transition duration-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="p-6 bg-zinc-900"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="font-medium"&gt;Fresh Interior with Built-in Shelving&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Official Flyer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="py-20 bg-black"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-5xl mx-auto px-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://grok.x.ai/image/4iSfn" alt="Jay's Repaints LLC Official Flyer"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">           </span>class="w-full rounded-3xl shadow-2xl border border-zinc-800"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Contact --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="contact" class="py-24 bg-zinc-900"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-4xl mx-auto px-6 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 data-aos="fade-up" class="text-5xl font-bold mb-6"&gt;Let's Paint Your Next Project&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p data-aos="fade-up" data-aos-delay="100" class="text-xl text-zinc-300 mb-12"&gt;Call today for a free, no-obligation estimate.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="bg-zinc-800 rounded-3xl p-14 max-w-lg mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-4xl font-semibold"&gt;📍 Belleview, Florida&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-zinc-400 mt-2"&gt;Serving Marion, Levy, Alachua, Putnam, Volusia, Sumter, Citrus &amp; surrounding areas&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-5xl font-bold text-blue-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>(630) 788-0508</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="mailto:JaysRepaintsLLC@gmail.com" class="block text-blue-400 hover:text-blue-300 text-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>JaysRepaintsLLC@gmail.com</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">          </span></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://share.google/rpyaR7NNojo3cebYP" target="_blank"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">             </span>class="block bg-blue-600 hover:bg-blue-700 py-6 rounded-2xl text-xl font-semibold transition mt-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>View Google Business Profile &amp; Reviews</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Footer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer class="bg-black py-12 border-t border-zinc-800"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto px-6 text-center text-zinc-500 text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>© 2026 Jay's Repaints, LLC • All Rights Reserved&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Professional Painting Services • Central Florida</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>AOS.init({ duration: 900, once: true });</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="bg-zinc-950 text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-lg z-50 border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-3xl shadow-lg">🎨</div>
+        <div>
+          <h1 class="text-2xl font-bold tracking-tighter">Jay's Repaints</h1>
+          <p class="text-[10px] text-blue-400 -mt-1">LLC</p>
+        </div>
+      </div>
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+      </div>
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-7 py-3.5 rounded-2xl font-semibold transition-all active:scale-95">
+        Free Quote
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div data-aos="fade-down" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-8 py-3 rounded-full mb-8 border border-white/20">
+        <span class="text-emerald-400 text-xl">●</span>
+        <span class="font-medium tracking-wide">Serving Central Florida • Licensed & Insured</span>
+      </div>
+      
+      <h1 data-aos="fade-up" class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+        Expert Painting.<br>Flawless Results.
+      </h1>
+      
+      <p data-aos="fade-up" data-aos-delay="200" class="text-2xl text-zinc-200 max-w-2xl mx-auto mb-12">
+        Professional residential, commercial, and farm painting across Marion, Levy, Alachua & surrounding counties.
+      </p>
+      
+      <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#contact" class="bg-white text-zinc-950 px-10 py-5 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 hover:scale-105 transition">
+          <i class="fas fa-phone"></i> Get Your Free Estimate
+        </a>
+        <a href="https://share.google/rpyaR7NNojo3cebYP" target="_blank" 
+           class="border-2 border-white/60 hover:bg-white/10 px-10 py-5 rounded-2xl font-semibold text-lg transition flex items-center justify-center gap-3">
+          View Google Profile →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 data-aos="fade-up" class="text-5xl font-bold mb-4">Our Services</h2>
+        <p data-aos="fade-up" data-aos-delay="100" class="text-zinc-400 text-lg">Interior • Exterior • Specialty</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="fade-up" class="service-card bg-zinc-800 p-10 rounded-3xl border border-zinc-700">
+          <div class="text-6xl mb-6">🏡</div>
+          <h3 class="text-3xl font-semibold mb-4">Interior Painting</h3>
+          <p class="text-zinc-400">Fresh coats, accent walls, cabinet refinishing, and clean, precise finishes.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="150" class="service-card bg-zinc-800 p-10 rounded-3xl border border-zinc-700">
+          <div class="text-6xl mb-6">🌳</div>
+          <h3 class="text-3xl font-semibold mb-4">Exterior Painting</h3>
+          <p class="text-zinc-400">Durable protection for your home, barn, or commercial building.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="service-card bg-zinc-800 p-10 rounded-3xl border border-zinc-700">
+          <div class="text-6xl mb-6">🏠</div>
+          <h3 class="text-3xl font-semibold mb-4">Farms & Commercial</h3>
+          <p class="text-zinc-400">Barn painting, pressure washing, staining, and large-scale projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects / Gallery -->
+  <section id="projects" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 data-aos="fade-up" class="text-5xl font-bold text-center mb-4">Recent Projects</h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-center text-zinc-400 mb-16">Real work. Real results.</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="zoom-in" class="rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://grok.x.ai/image/Qg73U" alt="Blue Barn Exterior" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+          <div class="p-6 bg-zinc-900">
+            <p class="font-medium">Beautiful Blue Barn – Exterior Repaint</p>
+          </div>
+        </div>
+        
+        <div data-aos="zoom-in" data-aos-delay="100" class="rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://grok.x.ai/image/SNVKp" alt="Red Barn Doors" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+          <div class="p-6 bg-zinc-900">
+            <p class="font-medium">Custom Red Barn Doors with White Trim</p>
+          </div>
+        </div>
+        
+        <div data-aos="zoom-in" data-aos-delay="200" class="rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://grok.x.ai/image/CrVLC" alt="Interior Painting" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+          <div class="p-6 bg-zinc-900">
+            <p class="font-medium">Fresh Interior with Built-in Shelving</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flyer / Services Banner -->
+  <section class="py-20 bg-black">
+    <div class="max-w-5xl mx-auto px-6">
+      <img src="https://grok.x.ai/image/4iSfn" alt="Jay's Repaints LLC Official Flyer" 
+           class="w-full rounded-3xl shadow-2xl border border-zinc-800">
+    </div>
+  </section>
+
+  <!-- About & Contact -->
+  <section id="contact" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="text-5xl font-bold mb-6">Let's Paint Your Next Project</h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-zinc-300 mb-12">Call today for a **free, no-obligation estimate**.</p>
+      
+      <div class="bg-zinc-800 rounded-3xl p-14 max-w-lg mx-auto">
+        <div class="space-y-10">
+          <div>
+            <p class="text-4xl font-semibold">📍 Belleview, Florida</p>
+            <p class="text-zinc-400 mt-2">Serving Marion, Levy, Alachua, Putnam, Volusia, Sumter, Citrus & surrounding areas</p>
+          </div>
+          
+          <div class="text-5xl font-bold text-blue-400">
+            (630) 788-0508
+          </div>
+          
+          <a href="mailto:JaysRepaintsLLC@gmail.com" class="block text-blue-400 hover:text-blue-300 text-lg">
+            JaysRepaintsLLC@gmail.com
+          </a>
+          
+          <a href="https://share.google/rpyaR7NNojo3cebYP" target="_blank" 
+             class="block bg-blue-600 hover:bg-blue-700 py-6 rounded-2xl text-xl font-semibold transition mt-8">
+            View Google Business Profile & Reviews
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500 text-sm">
+      © 2026 Jay's Repaints, LLC • All Rights Reserved<br>
+      Professional Painting Services • Central Florida
+    </div>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 900, once: true });
+  </script>
 </body>
 </html>
