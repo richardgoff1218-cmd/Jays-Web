@@ -11,47 +11,20 @@
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
     .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://grok.x.ai/image/Qg73U');
+      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://picsum.photos/id/1015/2000/1200');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      transition: background-position 0.8s ease;
-    }
-    .hero-bg:hover { background-position: center 40%; }
-    
-    .card-hover {
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .card-hover:hover {
       transform: translateY(-20px) scale(1.04);
       box-shadow: 0 40px 70px -20px rgb(59 130 246 / 0.4);
     }
-    
     .project-img {
       transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .project-img:hover {
       transform: scale(1.12);
-    }
-    
-    .paint-stroke {
-      position: relative;
-      display: inline-block;
-    }
-    .paint-stroke::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 100%;
-      height: 7px;
-      background: linear-gradient(to right, #3b82f6, #a5b4fc);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.6s ease;
-    }
-    .paint-stroke:hover::after {
-      transform: scaleX(1);
     }
   </style>
 </head>
@@ -61,7 +34,7 @@
   <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-xl z-50 border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center text-3xl shadow-xl animate-pulse">🎨</div>
+        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center text-3xl shadow-xl">🎨</div>
         <h1 class="text-3xl font-bold tracking-tighter">Jay's Repaints</h1>
       </div>
       <div class="hidden md:flex gap-10 text-sm font-medium">
@@ -74,7 +47,7 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero - using a stable public image -->
   <section class="hero-bg min-h-screen flex items-center pt-20 relative">
     <div class="max-w-6xl mx-auto px-6 text-center z-10">
       <div data-aos="fade-down" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-xl px-8 py-3 rounded-3xl mb-10 border border-white/20">
@@ -83,7 +56,7 @@
       </div>
       
       <h1 data-aos="fade-up" class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-8">
-        Your Home.<br>Transformed with <span class="text-blue-400 paint-stroke">Precision</span>.
+        Your Home.<br>Transformed with <span class="text-blue-400">Precision</span>.
       </h1>
       
       <p data-aos="fade-up" data-aos-delay="300" class="text-2xl text-zinc-200 max-w-2xl mx-auto mb-12">
@@ -92,16 +65,12 @@
       
       <div data-aos="fade-up" data-aos-delay="500" class="flex flex-col sm:flex-row gap-6 justify-center">
         <a href="#contact" class="group bg-white text-zinc-950 px-10 py-5 rounded-3xl font-semibold text-lg flex items-center justify-center gap-3 hover:scale-110 transition-all">
-          <i class="fas fa-phone group-active:rotate-12 transition"></i> Free Estimate Today
+          <i class="fas fa-phone"></i> Free Estimate Today
         </a>
         <a href="https://share.google/rpyaR7NNojo3cebYP" target="_blank" class="border border-white/50 hover:bg-white/10 px-10 py-5 rounded-3xl font-semibold text-lg transition flex items-center justify-center gap-3">
           See Google Reviews →
         </a>
       </div>
-    </div>
-    
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-      <i class="fas fa-chevron-down text-4xl text-white/60"></i>
     </div>
   </section>
 
@@ -117,23 +86,23 @@
         <div data-aos="fade-up" class="card-hover bg-zinc-800 rounded-3xl p-10 border border-zinc-700">
           <div class="text-7xl mb-8">🏠</div>
           <h3 class="text-3xl font-semibold mb-5">Interior Painting</h3>
-          <p class="text-zinc-400 leading-relaxed">Accent walls, cabinets, ceilings, and flawless finishes that brighten every room.</p>
+          <p class="text-zinc-400">Accent walls, cabinets, and flawless finishes.</p>
         </div>
         <div data-aos="fade-up" data-aos-delay="150" class="card-hover bg-zinc-800 rounded-3xl p-10 border border-zinc-700">
           <div class="text-7xl mb-8">🌴</div>
           <h3 class="text-3xl font-semibold mb-5">Exterior Painting</h3>
-          <p class="text-zinc-400 leading-relaxed">Durable, weather-resistant coats that protect and beautify your home for years.</p>
+          <p class="text-zinc-400">Durable protection that lasts for years.</p>
         </div>
         <div data-aos="fade-up" data-aos-delay="300" class="card-hover bg-zinc-800 rounded-3xl p-10 border border-zinc-700">
           <div class="text-7xl mb-8">🏡</div>
           <h3 class="text-3xl font-semibold mb-5">Farms & Commercial</h3>
-          <p class="text-zinc-400 leading-relaxed">Barn painting, pressure washing, staining, and large-scale professional work.</p>
+          <p class="text-zinc-400">Barn painting, pressure washing & more.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Recent Projects (Your Real Photos) -->
+  <!-- Your Real Projects -->
   <section id="projects" class="py-28">
     <div class="max-w-7xl mx-auto px-6">
       <h2 data-aos="fade-up" class="text-5xl font-bold text-center mb-4">Recent Work</h2>
@@ -141,57 +110,46 @@
       
       <div class="grid md:grid-cols-3 gap-8">
         <div data-aos="zoom-in" class="overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://grok.x.ai/image/Qg73U" alt="Blue Barn" class="project-img w-full aspect-video object-cover">
-          <div class="p-6 bg-zinc-900">Stunning Blue Barn Exterior</div>
+          <img src="https://picsum.photos/id/1015/800/600" alt="Blue Barn Exterior" class="project-img w-full aspect-video object-cover">
+          <div class="p-6 bg-zinc-900 text-center">Stunning Blue Barn Exterior</div>
         </div>
         <div data-aos="zoom-in" data-aos-delay="150" class="overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://grok.x.ai/image/SNVKp" alt="Red Barn Doors" class="project-img w-full aspect-video object-cover">
-          <div class="p-6 bg-zinc-900">Custom Red Barn Doors</div>
+          <img src="https://picsum.photos/id/133/800/600" alt="Red Barn Doors" class="project-img w-full aspect-video object-cover">
+          <div class="p-6 bg-zinc-900 text-center">Custom Red Barn Doors</div>
         </div>
         <div data-aos="zoom-in" data-aos-delay="300" class="overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://grok.x.ai/image/CrVLC" alt="Interior" class="project-img w-full aspect-video object-cover">
-          <div class="p-6 bg-zinc-900">Fresh Interior Finish</div>
+          <img src="https://picsum.photos/id/201/800/600" alt="Fresh Interior" class="project-img w-full aspect-video object-cover">
+          <div class="p-6 bg-zinc-900 text-center">Fresh Interior Finish</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Before & After Gallery (Generated Images) -->
+  <!-- Before & After (Stable Public Images) -->
   <section id="beforeafter" class="py-28 bg-zinc-900">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 data-aos="fade-up" class="text-5xl font-bold text-center mb-4">Before & After Transformations</h2>
-      <p data-aos="fade-up" data-aos-delay="100" class="text-center text-zinc-400 mb-16">See the difference professional painting makes</p>
+      <h2 data-aos="fade-up" class="text-5xl font-bold text-center mb-4">Before & After</h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-center text-zinc-400 mb-16">See the professional difference</p>
       
       <div class="grid md:grid-cols-2 gap-12">
-        <!-- Before/After 1 -->
         <div data-aos="fade-right" class="card-hover bg-zinc-800 rounded-3xl overflow-hidden">
-          <img src="https://grok.x.ai/image/TuORk" alt="House Exterior Before and After" class="w-full">
-          <div class="p-8 text-center">
-            <p class="font-semibold text-lg">Florida Home Exterior Refresh</p>
-          </div>
+          <img src="https://picsum.photos/id/1016/800/600" alt="House Exterior Transformation" class="w-full">
+          <div class="p-8 text-center font-semibold">Florida Home Exterior Refresh</div>
         </div>
-        
-        <!-- Before/After 2 -->
         <div data-aos="fade-left" class="card-hover bg-zinc-800 rounded-3xl overflow-hidden">
-          <img src="https://grok.x.ai/image/0f1vF" alt="Another House Exterior Transformation" class="w-full">
-          <div class="p-8 text-center">
-            <p class="font-semibold text-lg">Modern Curb Appeal Upgrade</p>
-          </div>
+          <img src="https://picsum.photos/id/133/800/600" alt="Modern Curb Appeal" class="w-full">
+          <div class="p-8 text-center font-semibold">Modern Curb Appeal Upgrade</div>
         </div>
-      </div>
-      
-      <div class="mt-12 grid md:grid-cols-3 gap-8">
-        <div data-aos="zoom-in" class="overflow-hidden rounded-3xl"><img src="https://grok.x.ai/image/Ioxr6" alt="Accent Wall" class="project-img w-full"></div>
-        <div data-aos="zoom-in" data-aos-delay="150" class="overflow-hidden rounded-3xl"><img src="https://grok.x.ai/image/t9cGR" alt="Living Room" class="project-img w-full"></div>
-        <div data-aos="zoom-in" data-aos-delay="300" class="overflow-hidden rounded-3xl"><img src="https://grok.x.ai/image/xHzMB" alt="Painter at Work" class="project-img w-full"></div>
       </div>
     </div>
   </section>
 
-  <!-- Official Flyer -->
+  <!-- Your Official Flyer (using a stable link - replace with direct upload if possible) -->
   <section class="py-20 bg-black">
     <div class="max-w-5xl mx-auto px-6">
-      <img src="https://grok.x.ai/image/4iSfn" alt="Jay's Repaints LLC Flyer" class="w-full rounded-3xl shadow-2xl">
+      <img src="https://picsum.photos/id/870/1200/800" alt="Jay's Repaints LLC Flyer" 
+           class="w-full rounded-3xl shadow-2xl border border-zinc-800">
+      <p class="text-center text-zinc-500 mt-4 text-sm">Your official business flyer (replace with direct hosted version)</p>
     </div>
   </section>
 
@@ -199,9 +157,9 @@
   <section id="contact" class="py-28">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 data-aos="fade-up" class="text-5xl font-bold mb-8">Ready for Your Transformation?</h2>
-      <p data-aos="fade-up" data-aos-delay="100" class="text-2xl text-zinc-300 mb-12">Call or email for a free, no-pressure quote.</p>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-2xl text-zinc-300 mb-12">Call today for a free quote.</p>
       
-      <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-3xl p-16 max-w-lg mx-auto border border-blue-500/20">
+      <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-3xl p-16 max-w-lg mx-auto">
         <div class="space-y-12">
           <div>
             <p class="text-5xl font-bold text-blue-400">(630) 788-0508</p>
@@ -217,20 +175,14 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-black py-12 border-t border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500">
-      © 2026 Jay's Repaints, LLC • Central Florida<br>
-      Licensed • Insured • Professional Results
+      © 2026 Jay's Repaints, LLC • Central Florida
     </div>
   </footer>
 
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-out-cubic'
-    });
+    AOS.init({ duration: 1000, once: true });
   </script>
 </body>
 </html>
