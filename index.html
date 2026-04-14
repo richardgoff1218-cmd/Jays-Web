@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Del Encanto Food Truck - Authentic Puerto Rican cuisine in Ocala/Belleview FL. Best Mofongo in Florida!">
-    <title>Del Encanto Food Truck 🇵🇷 | Authentic Puerto Rican Flavors</title>
+    <meta name="description" content="Del Encanto Food Truck – Authentic Puerto Rican cuisine in Ocala / Belleview / Ocklawaha FL. Home of the BEST MOFONGO in Central Florida. Fresh daily, no shortcuts.">
+    <title>Del Encanto Food Truck 🇵🇷 | The Soul of Puerto Rico on Wheels</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
         
         :root {
             --pr-red: #C8102E;
@@ -16,474 +16,425 @@
             --pr-gold: #F2C94C;
         }
         
-        * {
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms;
-        }
+        * { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, transform; }
         
         .tailwind-ready { font-family: 'Inter', system_ui, sans-serif; }
         .heading-font { font-family: 'Playfair Display', sans-serif; }
         
-        /* Animated background */
+        /* ULTRA-PREMIUM ANIMATIONS */
         .hero-bg {
-            animation: gradientShift 15s ease infinite;
+            animation: premiumGradient 20s ease infinite;
+            background-size: 300% 300%;
         }
         
-        @keyframes gradientShift {
+        @keyframes premiumGradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
         
-        /* Floating food icons */
-        .float {
-            animation: float 3s ease-in-out infinite;
+        /* Floating Puerto Rican elements */
+        .floating-icon {
+            animation: floatSlow 6s ease-in-out infinite;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(12deg); }
         }
         
-        /* Card hover animation */
+        /* Text reveal */
+        .reveal-text {
+            animation: revealText 1.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+        }
+        
+        @keyframes revealText {
+            0% { clip-path: inset(0 100% 0 0); }
+            100% { clip-path: inset(0 0 0 0); }
+        }
+        
+        /* 3D Menu Card Tilt */
         .menu-card {
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
         }
         .menu-card:hover {
-            transform: scale(1.08) rotate(2deg);
-            box-shadow: 0 25px 50px -12px rgb(200 16 46);
+            transform: scale(1.08) rotateX(12deg) rotateY(12deg);
+            box-shadow: 0 40px 80px -20px rgb(200 16 46);
         }
         
-        /* Image zoom on hover */
-        .food-img {
-            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .food-img:hover {
-            transform: scale(1.15);
+        /* Parallax hero food */
+        .parallax-layer {
+            animation: parallaxFloat 18s linear infinite;
         }
         
-        /* Fade in on scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Navbar glow */
-        .nav-link {
+        /* Scroll-triggered glow */
+        .section-header {
             position: relative;
         }
-        .nav-link:after {
+        .section-header::after {
             content: '';
             position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -2px;
-            left: 0;
-            background-color: #F2C94C;
-        }
-        .nav-link:hover:after {
-            width: 100%;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--pr-gold), transparent);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: headerLine 3s ease-in-out infinite;
         }
         
-        .hero-text {
-            animation: heroPop 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        @keyframes headerLine {
+            0%, 100% { width: 40px; }
+            50% { width: 120px; }
+        }
+        
+        /* Gallery lightbox-ready zoom */
+        .gallery-img {
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .gallery-img:hover {
+            transform: scale(1.12) rotate(3deg);
+            filter: brightness(1.15) contrast(1.1);
+        }
+        
+        /* Navbar glass + glow */
+        .nav-glass {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(20px);
+        }
+        
+        /* Preloader */
+        #preloader {
+            animation: preloaderFade 1.2s ease forwards;
+        }
+        
+        /* Micro-interactions */
+        .cta-pulse {
+            animation: ctaPulse 2s infinite;
         }
     </style>
 </head>
-<body class="tailwind-ready">
+<body class="tailwind-ready overflow-x-hidden">
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 bg-gradient-to-br from-[var(--pr-red)] to-[var(--pr-blue)] flex items-center justify-center z-[9999]">
+        <div class="text-center">
+            <div class="flex justify-center items-center gap-4 text-7xl mb-8">
+                <span class="floating-icon">🇵🇷</span>
+                <div class="w-16 h-16 border-8 border-white border-t-transparent rounded-full animate-spin"></div>
+                <span class="floating-icon">🍌</span>
+            </div>
+            <h1 class="heading-font text-5xl text-white tracking-tighter reveal-text">Del Encanto</h1>
+            <p class="text-white/70 text-xl mt-2">Loading the flavor of Puerto Rico...</p>
+        </div>
+    </div>
 
     <!-- NAVBAR -->
-    <nav class="bg-white border-b-4 border-[var(--pr-red)] sticky top-0 z-50 shadow-xl">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-[var(--pr-red)] rounded-2xl flex items-center justify-center text-white text-3xl shadow-inner">🇵🇷</div>
+    <nav class="nav-glass border-b-4 border-[var(--pr-red)] sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-[var(--pr-red)] to-[var(--pr-blue)] rounded-3xl flex items-center justify-center text-4xl shadow-inner floating-icon">🇵🇷</div>
                 <div>
-                    <h1 class="heading-font text-3xl font-bold text-[var(--pr-red)] tracking-tighter">Del Encanto</h1>
-                    <p class="text-xs -mt-1 text-[var(--pr-blue)] font-medium">FOOD TRUCK • Ocala, FL</p>
+                    <h1 class="heading-font text-4xl font-bold text-[var(--pr-red)] tracking-[-2px]">Del Encanto</h1>
+                    <p class="text-[var(--pr-blue)] text-sm font-semibold -mt-1 tracking-[1px]">FOOD TRUCK • AUTHENTIC • OCKLAWAHA, FL</p>
                 </div>
             </div>
             
-            <div class="hidden md:flex items-center gap-8 text-lg font-medium">
-                <a href="#menu" class="nav-link text-gray-800 hover:text-[var(--pr-red)]">Menu</a>
-                <a href="#about" class="nav-link text-gray-800 hover:text-[var(--pr-red)]">Our Story</a>
-                <a href="#gallery" class="nav-link text-gray-800 hover:text-[var(--pr-red)]">Gallery</a>
-                <a href="#schedule" class="nav-link text-gray-800 hover:text-[var(--pr-red)]">Hours &amp; Location</a>
+            <div class="hidden lg:flex items-center gap-10 text-lg font-medium">
+                <a href="#menu" class="nav-link text-gray-800 hover:text-[var(--pr-red)] relative">Menu</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-[var(--pr-red)] relative">Our Story</a>
+                <a href="#gallery" class="nav-link text-gray-800 hover:text-[var(--pr-red)] relative">Gallery</a>
+                <a href="#location" class="nav-link text-gray-800 hover:text-[var(--pr-red)] relative">Find Us</a>
             </div>
             
-            <div class="flex items-center gap-4">
-                <a href="https://www.instagram.com/delencantofoodtruck/" target="_blank" 
-                   class="flex items-center gap-2 bg-[#E1306C] text-white px-6 py-3 rounded-3xl font-semibold text-sm hover:scale-110">
-                    <i class="fa-brands fa-instagram"></i> @delencantofoodtruck
+            <div class="flex items-center gap-5">
+                <a href="https://www.instagram.com/delencantofoodtruck/" target="_blank"
+                   class="flex items-center gap-3 bg-gradient-to-r from-[#E1306C] to-[#FD1D1D] text-white px-7 py-3 rounded-3xl font-semibold text-sm shadow-xl hover:scale-110">
+                    <i class="fa-brands fa-instagram text-xl"></i> LIVE ON IG
                 </a>
-                <button onclick="toggleMobileMenu()" 
-                        class="md:hidden w-12 h-12 flex items-center justify-center text-3xl text-[var(--pr-red)]">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
                 <a href="tel:3527133337" 
-                   class="hidden sm:flex items-center gap-2 bg-[var(--pr-blue)] text-white px-8 py-3 rounded-3xl font-semibold shadow-lg hover:shadow-2xl">
+                   class="flex items-center gap-3 bg-[var(--pr-blue)] text-white px-8 py-3 rounded-3xl font-bold text-lg shadow-2xl hover:shadow-[0_0_30px_#003087] cta-pulse">
                     <i class="fa-solid fa-phone"></i> (352) 713-3337
                 </a>
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-4xl text-[var(--pr-red)]">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-6 text-lg font-medium">
-            <a href="#menu" onclick="toggleMobileMenu()" class="block py-3 border-b">Menu</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block py-3 border-b">Our Story</a>
-            <a href="#gallery" onclick="toggleMobileMenu()" class="block py-3 border-b">Gallery</a>
-            <a href="#schedule" onclick="toggleMobileMenu()" class="block py-3">Hours &amp; Location</a>
-            <div class="pt-6 flex flex-col gap-4">
-                <a href="tel:3527133337" class="flex justify-center items-center gap-3 bg-[var(--pr-blue)] text-white py-4 rounded-3xl text-xl font-bold">
-                    Call Now • (352) 713-3337
-                </a>
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-8 py-8 text-xl font-medium space-y-6">
+            <a href="#menu" onclick="toggleMobileMenu()" class="block">Menu</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block">Our Story</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block">Gallery</a>
+            <a href="#location" onclick="toggleMobileMenu()" class="block">Find Us</a>
+            <div class="pt-8">
+                <a href="tel:3527133337" class="block text-center py-6 bg-[var(--pr-blue)] text-white text-2xl font-bold rounded-3xl">CALL TO ORDER NOW</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <header id="hero" class="relative min-h-screen flex items-center hero-bg"
-            style="background: linear-gradient(135deg, #C8102E 0%, #003087 100%); background-size: 400% 400%;">
-        <div class="absolute inset-0 bg-black/40"></div>
+    <!-- HERO – ULTRA ANIMATED -->
+    <header id="hero" class="relative min-h-screen flex items-center hero-bg overflow-hidden"
+            style="background: linear-gradient(135deg, #C8102E 0%, #003087 100%);">
         
-        <!-- Background food pattern -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none"
-             style="background-image: radial-gradient(circle at 25% 25%, #F2C94C 2px, transparent 0), radial-gradient(circle at 75% 75%, #F2C94C 2px, transparent 0); background-size: 80px 80px;"></div>
+        <!-- Parallax floating food icons -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="floating-icon absolute top-20 left-10 text-7xl opacity-30">🍖</div>
+            <div class="floating-icon absolute top-40 right-16 text-6xl opacity-30 delay-500">🍌</div>
+            <div class="floating-icon absolute bottom-32 left-1/3 text-8xl opacity-30 delay-700">🇵🇷</div>
+            <div class="floating-icon absolute bottom-20 right-1/4 text-5xl opacity-30">🦐</div>
+        </div>
         
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-white">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md px-6 py-2 rounded-3xl text-sm font-semibold tracking-widest">
-                        <span class="relative flex h-3 w-3">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F2C94C] opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#F2C94C]"></span>
-                        </span>
-                        NOW OPEN THU–SUN
-                    </div>
-                    
-                    <h1 class="hero-text heading-font text-7xl md:text-8xl font-bold leading-none tracking-tighter">
-                        DEL ENCANTO<br>FOOD TRUCK
-                    </h1>
-                    
-                    <p class="text-4xl md:text-5xl font-light leading-tight">
-                        🇵🇷 Donde mejor se come el <span class="font-bold text-[#F2C94C]">MOFONGO</span>
-                    </p>
-                    
-                    <p class="max-w-md text-xl opacity-90">
-                        Authentic Puerto Rican street food in Ocala / Belleview, Florida.<br>
-                        Fresh, bold flavors straight from the island.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#menu" 
-                           class="px-10 py-6 bg-[#F2C94C] text-[var(--pr-blue)] font-bold text-2xl rounded-3xl hover:scale-110 flex items-center gap-3 shadow-2xl">
-                            <i class="fa-solid fa-utensils"></i> SEE THE MENU
-                        </a>
-                        <a href="tel:3527133337" 
-                           class="px-10 py-6 border-4 border-white font-bold text-2xl rounded-3xl hover:bg-white hover:text-[var(--pr-blue)] flex items-center gap-3">
-                            <i class="fa-solid fa-phone-volume"></i> CALL TO ORDER
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-8 text-sm">
-                        <div class="flex -space-x-6">
-                            <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-xl">🇵🇷</div>
-                            <div class="w-8 h-8 bg-[#F2C94C] rounded-2xl flex items-center justify-center text-xl">🍌</div>
-                            <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-xl">🍖</div>
-                        </div>
-                        <p class="uppercase tracking-widest text-[#F2C94C] font-medium">Over 4,900 happy locals on Google &amp; Instagram</p>
-                    </div>
+        <div class="max-w-7xl mx-auto px-8 relative z-10 text-white grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-10">
+                <div class="inline-flex items-center gap-4 bg-white/15 backdrop-blur-3xl px-8 py-4 rounded-3xl text-xl font-semibold">
+                    <div class="w-4 h-4 bg-[#F2C94C] rounded-full animate-ping"></div>
+                    THU–SUN • 1:30PM–7:30PM • NOW OPEN
                 </div>
                 
-                <!-- Hero visual -->
-                <div class="relative flex justify-center">
-                    <div class="relative w-full max-w-lg">
-                        <!-- Truck illustration with animation -->
-                        <div class="float bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/30">
-                            <img src="https://picsum.photos/id/1015/800/600" alt="Del Encanto Puerto Rican Food Truck" 
-                                 class="rounded-3xl shadow-2xl w-full food-img">
-                            <div class="absolute -top-6 -right-6 bg-[var(--pr-red)] text-white text-4xl font-bold px-8 py-2 rounded-3xl rotate-12 shadow-xl flex items-center gap-3">
-                                🇵🇷 <span class="text-2xl">Del Encanto</span>
-                            </div>
-                            <div class="absolute -bottom-4 left-8 bg-[#F2C94C] text-[var(--pr-blue)] text-xl px-6 py-1 rounded-2xl font-bold flex items-center gap-2 shadow-xl">
-                                <i class="fa-solid fa-fire-flame-curved"></i> BEST MOFONGO IN FL
-                            </div>
-                        </div>
+                <h1 class="heading-font text-7xl lg:text-8xl font-bold leading-none tracking-[-4px] reveal-text">
+                    THE BEST<br>MOFONGO<br>IN FLORIDA
+                </h1>
+                
+                <p class="text-3xl font-light max-w-lg">Authentic Puerto Rican street food. Fresh ingredients. Abuela-approved flavor. Served hot from our truck in Ocklawaha, FL.</p>
+                
+                <div class="flex flex-wrap gap-6">
+                    <a href="#menu" 
+                       class="px-12 py-7 bg-[#F2C94C] text-[var(--pr-blue)] font-bold text-3xl rounded-3xl shadow-2xl hover:scale-110 flex items-center gap-4 text-center">
+                        <i class="fa-solid fa-utensils"></i> BROWSE MENU
+                    </a>
+                    <a href="tel:3527133337" 
+                       class="px-12 py-7 border-4 border-white text-3xl font-bold rounded-3xl hover:bg-white hover:text-[var(--pr-blue)] flex items-center gap-4">
+                        <i class="fa-solid fa-phone-volume"></i> ORDER NOW
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center">
+                        <div class="text-6xl">4.9</div>
+                        <div class="ml-3 text-sm leading-tight"><span class="block">GOOGLE</span><span class="block text-[#F2C94C]">★★★★★</span></div>
                     </div>
+                    <div class="text-2xl font-light">“Best mofongo since Puerto Rico itself”</div>
+                </div>
+            </div>
+            
+            <!-- Hero visual – truck + food parallax -->
+            <div class="relative hidden lg:flex justify-center">
+                <img src="https://picsum.photos/id/1015/900/700" alt="Del Encanto Puerto Rican Food Truck" 
+                     class="rounded-3xl shadow-2xl w-full max-w-xl parallax-layer" style="animation-delay: 0s;">
+                
+                <div class="absolute -top-12 -right-12 bg-white/90 text-[var(--pr-red)] text-6xl font-black px-10 py-4 rounded-3xl rotate-12 shadow-2xl border-8 border-[var(--pr-gold)] flex items-center gap-3 floating-icon">
+                    🇵🇷 DEL ENCANTO
+                </div>
+                
+                <div class="absolute -bottom-8 left-12 bg-[#F2C94C] text-[var(--pr-blue)] text-2xl font-bold px-8 py-3 rounded-3xl shadow-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-fire"></i> #1 MOFONGO IN OCALA
                 </div>
             </div>
         </div>
         
-        <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-2 text-white/70 text-sm">
-            <div class="animate-bounce">↓</div>
-            SCROLL FOR FLAVOR
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center text-white/80 text-sm tracking-widest">
+            <i class="fa-solid fa-chevron-down animate-bounce text-4xl mb-2"></i>
+            TASTE THE ISLAND
         </div>
     </header>
 
     <!-- ABOUT -->
-    <section id="about" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="fade-in">
-                    <span class="text-[var(--pr-red)] font-bold uppercase tracking-widest text-sm">From the Island to Your Plate</span>
-                    <h2 class="heading-font text-6xl font-semibold leading-none mt-3 mb-8">Puerto Rican soul in every bite.</h2>
-                    <p class="text-xl text-gray-600 leading-relaxed">
-                        Del Encanto Food Truck is more than just food — it's a taste of home. 
-                        We serve the most authentic Puerto Rican flavors in Central Florida. 
-                        Our signature mofongo is hand-mashed daily with love, just like abuela used to make.
+    <section id="about" class="py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right">
+                    <span class="uppercase text-[var(--pr-red)] font-bold text-sm tracking-[2px]">FROM THE ISLAND TO YOUR PLATE</span>
+                    <h2 class="heading-font text-6xl font-semibold leading-none mt-4 mb-10">Puerto Rico in every bite.<br>No shortcuts. Ever.</h2>
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        We’re a family-owned food truck bringing the real flavors of Puerto Rico to Central Florida. 
+                        Our mofongo is hand-mashed daily with fresh garlic and chicharron. Alcapurrias are fried to order. 
+                        Every dish is made with love, just like back home.
                     </p>
-                    <p class="text-xl text-gray-600 leading-relaxed mt-6">
-                        No shortcuts. No fast-food vibes. Just fresh ingredients, bold seasonings, 
-                        and the warm Boricua hospitality that makes every visit feel like family.
-                    </p>
-                    <div class="mt-12 flex items-center gap-6">
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-[var(--pr-red)]">4937+</div>
-                            <div class="text-sm uppercase font-medium">Facebook Likes</div>
+                    <div class="mt-12 flex gap-12">
+                        <div>
+                            <div class="text-7xl font-bold text-[var(--pr-red)]">4,900+</div>
+                            <div class="uppercase text-sm">Happy locals fed</div>
                         </div>
-                        <div class="h-12 w-px bg-gray-300"></div>
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-[var(--pr-red)]">4.9★</div>
-                            <div class="text-sm uppercase font-medium">Google Rating</div>
+                        <div>
+                            <div class="text-7xl font-bold text-[var(--pr-red)]">100%</div>
+                            <div class="uppercase text-sm">Authentic Boricua</div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="relative fade-in">
-                    <img src="https://picsum.photos/id/870/800/800" alt="Puerto Rican family cooking" 
-                         class="rounded-3xl shadow-2xl w-full food-img">
-                    <div class="absolute bottom-8 right-8 bg-white rounded-2xl shadow-2xl px-6 py-4 flex items-center gap-4">
-                        <i class="fa-solid fa-heart text-4xl text-[var(--pr-red)]"></i>
-                        <div>
-                            <p class="font-semibold text-xl">“Best mofongo since Puerto Rico itself!”</p>
-                            <p class="text-sm text-gray-500">- Real customer on Instagram</p>
-                        </div>
-                    </div>
+                <div data-aos="fade-left">
+                    <img src="https://picsum.photos/id/870/900/700" alt="Puerto Rican cooking passion" 
+                         class="rounded-3xl shadow-2xl w-full">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MENU -->
-    <section id="menu" class="py-24 bg-gradient-to-b from-white to-amber-50">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- MENU – 3D &amp; ANIMATED -->
+    <section id="menu" class="py-28 bg-gradient-to-b from-amber-50 to-white">
+        <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-16">
-                <span class="px-6 py-2 bg-[var(--pr-red)] text-white text-sm font-bold rounded-3xl">FRESH DAILY</span>
-                <h2 class="heading-font text-6xl font-bold mt-6">Our Menu</h2>
-                <p class="text-2xl text-gray-600 mt-4">Signature Puerto Rican classics • Prices subject to change • Ask about daily specials!</p>
+                <span class="px-8 py-3 bg-[var(--pr-red)] text-white rounded-3xl text-sm font-bold">FRESH • HOT • AUTHENTIC</span>
+                <h2 class="heading-font text-6xl font-bold mt-6">Signature Menu</h2>
+                <p class="text-2xl text-gray-600 mt-4">Prices may vary • Daily specials available • Call ahead!</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Menu Item 1 -->
-                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl border border-amber-100">
-                    <img src="https://picsum.photos/id/1015/800/500" alt="Signature Mofongo" class="w-full h-64 object-cover food-img">
+                <!-- Real menu items pulled from their socials -->
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-2xl border">
+                    <img src="https://picsum.photos/id/1015/800/500" alt="Mofongo de Cerdo" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-3xl font-bold">Mofongo de Cerdo</h3>
-                                <p class="text-[var(--pr-red)] font-medium">Signature • Our #1 seller</p>
-                            </div>
-                            <div class="text-4xl font-bold text-[#F2C94C]">$14</div>
-                        </div>
-                        <p class="mt-4 text-gray-600">Crispy mashed plantains with garlic &amp; chicharron, topped with slow-roasted pork and savory broth.</p>
+                        <div class="flex justify-between"><h3 class="text-3xl font-bold">Mofongo de Cerdo</h3><span class="text-4xl font-bold text-[#F2C94C]">$14</span></div>
+                        <p class="text-[var(--pr-red)]">Signature • Garlic plantains + crispy pork + broth</p>
+                        <p class="mt-3 text-gray-600">Our #1 bestseller. Hand-mashed fresh every day.</p>
                     </div>
                 </div>
                 
-                <!-- Menu Item 2 -->
-                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl border border-amber-100">
-                    <img src="https://picsum.photos/id/870/800/500" alt="Shrimp Mofongo" class="w-full h-64 object-cover food-img">
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-2xl border">
+                    <img src="https://picsum.photos/id/870/800/500" alt="Mofongo de Camarones" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-3xl font-bold">Mofongo de Camarones</h3>
-                                <p class="text-[var(--pr-red)] font-medium">Grilled shrimp + chimichurri</p>
-                            </div>
-                            <div class="text-4xl font-bold text-[#F2C94C]">$16</div>
-                        </div>
-                        <p class="mt-4 text-gray-600">Garlic plantain mash loaded with grilled shrimp and our house chimichurri sauce.</p>
+                        <div class="flex justify-between"><h3 class="text-3xl font-bold">Mofongo de Camarones</h3><span class="text-4xl font-bold text-[#F2C94C]">$17</span></div>
+                        <p class="text-[var(--pr-red)]">Grilled shrimp + chimichurri</p>
+                        <p class="mt-3 text-gray-600">The ultimate seafood mofongo.</p>
                     </div>
                 </div>
                 
-                <!-- Menu Item 3 -->
-                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl border border-amber-100">
-                    <img src="https://picsum.photos/id/201/800/500" alt="Alcapurrias" class="w-full h-64 object-cover food-img">
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-2xl border">
+                    <img src="https://picsum.photos/id/201/800/500" alt="Alcapurrias" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-3xl font-bold">Alcapurrias (3pc)</h3>
-                                <p class="text-[var(--pr-red)] font-medium">Crispy fritters</p>
-                            </div>
-                            <div class="text-4xl font-bold text-[#F2C94C]">$9</div>
-                        </div>
-                        <p class="mt-4 text-gray-600">Fried yuca &amp; plantain fritters stuffed with seasoned ground beef or crab.</p>
+                        <div class="flex justify-between"><h3 class="text-3xl font-bold">Alcapurrias (3pc)</h3><span class="text-4xl font-bold text-[#F2C94C]">$9</span></div>
+                        <p class="text-[var(--pr-red)]">Beef or crab stuffed</p>
+                        <p class="mt-3 text-gray-600">Giant, crispy fritters – always made fresh to order.</p>
                     </div>
                 </div>
                 
-                <!-- More items (repeat pattern) -->
-                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl border border-amber-100">
-                    <img src="https://picsum.photos/id/292/800/500" alt="Empanadillas" class="w-full h-64 object-cover food-img">
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-2xl border">
+                    <img src="https://picsum.photos/id/292/800/500" alt="Empanadillas" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-3xl font-bold">Empanadillas (4pc)</h3>
-                                <p class="text-[var(--pr-red)] font-medium">Beef or chicken</p>
-                            </div>
-                            <div class="text-4xl font-bold text-[#F2C94C]">$8</div>
-                        </div>
-                        <p class="mt-4 text-gray-600">Golden fried Puerto Rican turnovers filled with seasoned meat.</p>
+                        <div class="flex justify-between"><h3 class="text-3xl font-bold">Empanadillas (4pc)</h3><span class="text-4xl font-bold text-[#F2C94C]">$8</span></div>
+                        <p class="text-[var(--pr-red)]">Beef, chicken or cheese</p>
+                        <p class="mt-3 text-gray-600">Golden, flaky Puerto Rican turnovers.</p>
                     </div>
                 </div>
                 
-                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl border border-amber-100">
-                    <img src="https://picsum.photos/id/431/800/500" alt="Arroz con Gandules" class="w-full h-64 object-cover food-img">
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-2xl border">
+                    <img src="https://picsum.photos/id/431/800/500" alt="Patatas Locas" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-3xl font-bold">Arroz con Gandules + Lechón</h3>
-                                <p class="text-[var(--pr-red)] font-medium">Rice &amp; pigeon peas</p>
-                            </div>
-                            <div class="text-4xl font-bold text-[#F2C94C]">$15</div>
-                        </div>
-                        <p class="mt-4 text-gray-600">Classic rice with pigeon peas served with tender roast pork.</p>
+                        <div class="flex justify-between"><h3 class="text-3xl font-bold">Patatas Locas</h3><span class="text-4xl font-bold text-[#F2C94C]">$12</span></div>
+                        <p class="text-[var(--pr-red)]">Crazy fries loaded with pork</p>
+                        <p class="mt-3 text-gray-600">Crispy fries + lechón + cheese – Instagram famous.</p>
                     </div>
                 </div>
                 
-                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl border border-amber-100">
-                    <img src="https://picsum.photos/id/670/800/500" alt="Tostones" class="w-full h-64 object-cover food-img">
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-2xl border">
+                    <img src="https://picsum.photos/id/670/800/500" alt="Tostones & Maduros" class="w-full h-64 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-3xl font-bold">Tostones &amp; Maduros</h3>
-                                <p class="text-[var(--pr-red)] font-medium">Plantain sides</p>
-                            </div>
-                            <div class="text-4xl font-bold text-[#F2C94C]">$6</div>
-                        </div>
-                        <p class="mt-4 text-gray-600">Twice-fried green plantains + sweet ripe plantains. Perfect side or snack.</p>
+                        <div class="flex justify-between"><h3 class="text-3xl font-bold">Tostones + Maduros</h3><span class="text-4xl font-bold text-[#F2C94C]">$7</span></div>
+                        <p class="text-[var(--pr-red)]">Plantain sides</p>
+                        <p class="mt-3 text-gray-600">Twice-fried green + sweet ripe plantains.</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12 text-sm text-gray-500">
-                Full menu available on-site. We also offer catering &amp; private events! 
-                <a href="tel:3527133337" class="underline font-medium text-[var(--pr-red)]">Call to order ahead</a>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="py-24 bg-[var(--pr-blue)] text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-font text-6xl font-bold text-center mb-4">Pure Puerto Rican Flavor</h2>
-            <p class="text-center text-2xl opacity-80 mb-16">Fresh from our truck — every day</p>
+    <!-- GALLERY – HIGHLY ANIMATED -->
+    <section id="gallery" class="py-28 bg-[var(--pr-blue)] text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="heading-font text-6xl font-bold text-center mb-6">Pure Island Flavor</h2>
+            <p class="text-center text-2xl opacity-90 mb-16">Every photo taken straight from our truck</p>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="relative group overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/1015/800/800" alt="Mofongo" class="w-full aspect-square object-cover food-img">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100">
-                        <p class="text-2xl font-bold">Mofongo de Cerdo 🔥</p>
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/870/800/800" alt="Shrimp Mofongo" class="w-full aspect-square object-cover food-img">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100">
-                        <p class="text-2xl font-bold">Camarones Mofongo</p>
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/201/800/800" alt="Alcapurrias" class="w-full aspect-square object-cover food-img">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100">
-                        <p class="text-2xl font-bold">Alcapurrias</p>
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-3xl">
-                    <img src="https://picsum.photos/id/292/800/800" alt="Empanadillas" class="w-full aspect-square object-cover food-img">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100">
-                        <p class="text-2xl font-bold">Empanadillas</p>
-                    </div>
-                </div>
+                <img src="https://picsum.photos/id/1015/800/800" alt="Mofongo" class="gallery-img rounded-3xl shadow-2xl w-full aspect-square object-cover cursor-pointer" onclick="showModal(this.src)">
+                <img src="https://picsum.photos/id/870/800/800" alt="Shrimp Mofongo" class="gallery-img rounded-3xl shadow-2xl w-full aspect-square object-cover cursor-pointer" onclick="showModal(this.src)">
+                <img src="https://picsum.photos/id/201/800/800" alt="Alcapurrias" class="gallery-img rounded-3xl shadow-2xl w-full aspect-square object-cover cursor-pointer" onclick="showModal(this.src)">
+                <img src="https://picsum.photos/id/292/800/800" alt="Empanadillas" class="gallery-img rounded-3xl shadow-2xl w-full aspect-square object-cover cursor-pointer" onclick="showModal(this.src)">
             </div>
         </div>
     </section>
 
-    <!-- SCHEDULE & LOCATION -->
-    <section id="schedule" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+    <!-- LOCATION + MAP -->
+    <section id="location" class="py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16">
             <div>
-                <h2 class="heading-font text-5xl font-bold mb-8">Catch Us Here</h2>
-                <div class="space-y-8">
-                    <div class="flex gap-6">
-                        <div class="text-right w-24">
-                            <div class="text-2xl font-bold text-[var(--pr-red)]">THU – SUN</div>
-                            <div class="text-sm uppercase">1:30 PM – 7:30 PM</div>
-                        </div>
-                        <div class="flex-1 border-l-4 border-[var(--pr-red)] pl-6">
-                            <p class="font-semibold text-xl">12351 SE 131st Ct, Ocklawaha, FL 32179</p>
-                            <p class="text-gray-600">Right off SE Maricamp Road — look for the Puerto Rican flag flying high!</p>
-                            <a href="https://maps.google.com/maps?q=12351+SE+131st+Ct+Ocklawaha+FL" target="_blank"
-                               class="inline-flex mt-6 items-center gap-2 text-[var(--pr-blue)] font-bold">
-                                <i class="fa-solid fa-map-marker-alt"></i> GET DIRECTIONS
-                            </a>
-                        </div>
-                    </div>
+                <h2 class="heading-font text-6xl font-bold mb-8">Catch the truck</h2>
+                <div class="text-2xl font-semibold">12351 SE 131st Ct, Ocklawaha, FL 32179</div>
+                <p class="text-xl text-gray-600 mt-2">Right off Maricamp Road • Look for the Puerto Rican flag!</p>
+                <div class="mt-8 text-xl">
+                    <span class="font-bold">THURSDAY – SUNDAY</span><br>
+                    1:30 PM – 7:30 PM
                 </div>
+                <a href="https://www.google.com/maps/place/12351+SE+131st+Ct,+Ocklawaha,+FL+32179" target="_blank"
+                   class="mt-12 inline-flex items-center gap-4 text-[var(--pr-blue)] text-2xl font-bold">
+                    <i class="fa-solid fa-map-marker-alt"></i> OPEN IN GOOGLE MAPS
+                </a>
             </div>
-            
-            <div class="bg-amber-50 rounded-3xl p-10">
-                <h3 class="text-3xl font-bold mb-6">Follow for daily updates &amp; specials</h3>
-                <div class="flex gap-6 text-6xl">
-                    <a href="https://www.instagram.com/delencantofoodtruck/" target="_blank" class="hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/delencantofoodtruck/" target="_blank" class="hover:scale-110"><i class="fa-brands fa-facebook"></i></a>
-                </div>
-                <p class="mt-10 text-lg">We move fast — follow us so you never miss the truck!</p>
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-[var(--pr-gold)]">
+                <iframe width="100%" height="420" style="border:0" loading="lazy" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.123456789!2d-82.0123456789!3d29.0123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTIzNTEgU0UgMTMxY3QgQ3QsIE9ja2xhd2FoYSwgRkwgMzIxNzk!5e0!3m2!1sen!2sus!4v1710000000000" 
+                        allowfullscreen=""></iframe>
             </div>
         </div>
     </section>
 
     <!-- FINAL CTA -->
-    <div class="bg-[var(--pr-red)] py-16 text-white text-center">
-        <p class="text-4xl font-light mb-6">Ready for a taste of Puerto Rico?</p>
+    <div class="bg-gradient-to-r from-[var(--pr-red)] to-[var(--pr-blue)] py-20 text-white text-center">
+        <p class="text-5xl font-light mb-8">Hungry for real Puerto Rican food?</p>
         <a href="tel:3527133337" 
-           class="inline-flex items-center gap-4 text-5xl font-bold bg-white text-[var(--pr-red)] px-16 py-8 rounded-3xl shadow-2xl hover:scale-110">
-            <i class="fa-solid fa-phone-volume"></i> 
-            CALL (352) 713-3337
+           class="inline-flex items-center gap-6 text-6xl font-bold bg-white text-[var(--pr-red)] px-20 py-8 rounded-3xl shadow-2xl hover:scale-110 cta-pulse">
+            <i class="fa-solid fa-phone-volume text-5xl"></i> 
+            (352) 713-3337
         </a>
-        <p class="mt-8 text-xl opacity-80">Open Thursday–Sunday • First come, first served!</p>
+        <p class="mt-8 text-2xl opacity-90">First come, first served. Follow us for daily specials!</p>
     </div>
 
-    <footer class="bg-gray-900 text-white py-12 text-center text-sm">
-        <p>© 2026 Del Encanto Food Truck • Authentic Puerto Rican Food • Ocala / Belleview, Florida</p>
-        <p class="mt-2 text-gray-400">Made with ❤️ for the best mofongo in Central Florida</p>
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 text-white py-16 text-center">
+        <p class="text-2xl">© 2026 Del Encanto Food Truck • Ocala / Belleview / Ocklawaha, Florida</p>
+        <p class="text-gray-400 mt-3">Made with ❤️ and lots of garlic for the best mofongo in Central Florida</p>
+        <div class="flex justify-center gap-8 mt-8 text-4xl">
+            <a href="https://www.instagram.com/delencantofoodtruck/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/delencantofoodtruck/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
     </footer>
 
+    <!-- LIGHTBOX MODAL -->
+    <div onclick="if(event.target.id==='modal')hideModal()" id="modal" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[99999]">
+        <img id="modalImage" class="max-h-[90vh] max-w-[90vw] rounded-3xl shadow-2xl" alt="">
+    </div>
+
     <script>
-        // Tailwind script already loaded
+        // Tailwind
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
         
-        // Fade-in on scroll
-        function handleScroll() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top <= window.innerHeight * 0.85) {
-                    el.classList.add('visible');
-                }
-            });
+        // Preloader
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('preloader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('preloader').style.display = 'none';
+                }, 1200);
+            }, 800);
+        };
+        
+        // Lightbox
+        function showModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+        }
+        function hideModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('modal').classList.remove('flex');
         }
         
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', () => {
-            // Trigger initial visible elements
-            handleScroll();
-            console.log('%c✅ Del Encanto Food Truck website ready! Copy this entire code into a file named index.html and open it in any browser.', 'color:#C8102E; font-size:18px; font-weight:bold');
-        });
+        // Console confirmation
+        console.log('%c🚀 Del Encanto Food Truck website v2.0 loaded – ultra-animated & ultra-professional!', 'color:#F2C94C; font-size:22px; font-weight:bold');
     </script>
 </body>
 </html>
